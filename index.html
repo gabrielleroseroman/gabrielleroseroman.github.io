@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabrielle Rose Roman</title>
+<meta name="description" content="Gabrielle Rose Roman: environmental policy and conservation professional in Phoenix, Arizona, working on U.S.-Mexico border water, statewide environmental convening, and environmental justice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: one quiet column with a narrow left rail for section labels, like a river channel. */
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --ink: #1d2523;
+  --muted: #5b6763;
+  --line: #d9dfdc;
+  --accent: #1f6b6f;   /* river teal */
+  --accent-2: #b5833a; /* dry-wash ochre, used sparingly */
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121817; --surface: #19211f; --ink: #e6ebe9; --muted: #9eaba7;
+    --line: #2c3634; --accent: #6cc0c2; --accent-2: #d9a95e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121817; --surface: #19211f; --ink: #e6ebe9; --muted: #9eaba7;
+  --line: #2c3634; --accent: #6cc0c2; --accent-2: #d9a95e; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+nav { border-bottom: 1px solid var(--line); }
+nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+nav .name { font-family: var(--display); font-size: 20px; font-weight: 600; color: var(--ink); text-decoration: none; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; font-size: 15px; }
+nav ul a { color: var(--muted); text-decoration: none; }
+nav ul a:hover { color: var(--accent); }
+
+header.hero { padding: 72px 0 56px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 500; font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.08; margin: 0 0 20px; letter-spacing: -0.01em; text-wrap: balance; max-width: 15ch;
+}
+.hero p.lede { font-size: 20px; color: var(--muted); max-width: 60ch; margin: 0 0 28px; }
+.hero .meta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 4px; font-size: 15px; font-weight: 600;
+  text-decoration: none; border: 1px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.ghost { color: var(--accent); }
+
+.figures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 48px; }
+.figures div { background: var(--surface); padding: 18px 20px; }
+.figures strong { display: block; font-family: var(--display); font-size: 32px; font-weight: 500; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.figures span { font-size: 14px; color: var(--muted); }
+
+section { padding: 56px 0; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 180px 1fr; gap: 32px; }
+.label { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); padding-top: 6px; }
+h2 { font-family: var(--display); font-weight: 500; font-size: 30px; margin: 0 0 18px; text-wrap: balance; }
+.prose p { max-width: 65ch; margin: 0 0 16px; }
+
+.work { display: grid; gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; display: grid; gap: 6px; }
+.card .kind { font-size: 13px; color: var(--muted); }
+.card h3 { font-family: var(--display); font-weight: 600; font-size: 21px; margin: 0; line-height: 1.25; }
+.card p { margin: 0; max-width: 65ch; color: var(--ink); }
+.card .link { font-size: 15px; font-weight: 600; margin-top: 6px; }
+.card .note { font-size: 14px; color: var(--muted); }
+
+.timeline { display: grid; gap: 22px; }
+.job { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; }
+.job h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.job .when { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.job .role { color: var(--muted); font-size: 15px; grid-column: 1 / -1; }
+.job p { grid-column: 1 / -1; margin: 4px 0 0; max-width: 65ch; }
+
+.contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.talk-photo { width: 100%; height: auto; border-radius: 4px; display: block; margin-bottom: 8px; }
+.cert-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.cert-list li { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.cert-list strong { font-weight: 600; }
+.cert-list .when { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.cert-list .issuer { grid-column: 1 / -1; color: var(--muted); font-size: 15px; }
+footer { padding: 32px 0 48px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+
+@media (max-width: 720px) {
+  .row { grid-template-columns: 1fr; gap: 8px; }
+  .figures { grid-template-columns: repeat(2, 1fr); }
+  header.hero { padding: 48px 0 40px; }
+  .job { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="name" href="#top">Gabrielle Rose Roman</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1>Environmental policy and conservation in Arizona and the Southwest</h1>
+    <p class="lede">I connect science, policy, and people on shared resources, from U.S.-Mexico border water to Arizona’s first statewide environmental convening.</p>
+    <div class="meta">
+      <a class="btn primary" href="Gabrielle-Roman-Resume.pdf">View resume (PDF)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/gabrielleroseroman">LinkedIn</a>
+    </div>
+    <div class="figures" aria-label="Border water program at a glance">
+      <div><strong>50+</strong><span>organizations mapped in the binational water space</span></div>
+      <div><strong>50</strong><span>page border water report, shared with FUMEC’s board and at a binational water conference</span></div>
+      <div><strong>4</strong><span>binational action areas recommended, each with a funding pathway</span></div>
+      <div><strong>500+</strong><span>organizations in Arizona convening invite database</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap row">
+    <div class="label">About</div>
+    <div class="prose">
+      <h2>Bridging science and policy</h2>
+      <p>I’m a 2025 Yale Environmental Studies graduate based in Phoenix. I started in science, doing genomics research at the Smithsonian, but community conservation fieldwork in Kenya showed me I wanted to work with people as much as data. I now bring that analytical, science-grounded lens to policy and coordination.</p>
+      <p>As Scientist in Residence for the U.S.-Mexico Foundation for Science’s water program, I built a binational border water initiative from scratch. Working across the border is what drew me to water, since it is so clearly a shared resource. I’m also helping coordinate Arizona’s first statewide environmental convening with the Arizona Community Foundation.</p>
+      <p>I love breaking down silos between organizations, and I’m looking for a full-time role in water policy, conservation, or the broader environmental field in Arizona or the Southwest.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap row">
+    <div class="label">Selected work</div>
+    <div>
+      <h2>Research and writing</h2>
+      <div class="work">
+        <article class="card">
+          <span class="kind">Report · U.S.-Mexico Foundation for Science · 2026</span>
+          <h3>Border Water Report 2026</h3>
+          <p>A 50-page assessment of how FUMEC can advance binational agricultural water conservation along the U.S.-Mexico border. It combines a federal and nonprofit programming review, a policy landscape assessment, a survey of water conservation technologies, and in-depth stakeholder interviews, and recommends four action areas, from a smart farming pilot to a binational water “digital twin.”</p>
+          <span class="note">Presented to FUMEC’s Board of Directors and distributed at the “Bridges Over Water” binational conference (Monterrey, Mexico, Oct 2026). Full report coming soon on FUMEC’s website.</span>
+        </article>
+        <article class="card">
+          <span class="kind">Article · Mexico Business News · January 2026</span>
+          <h3>Why Mexican Industries Should Pay Attention to Water in 2026</h3>
+          <p>I wrote this piece for FUMEC on the business case for water stewardship in Mexico; it ran under the byline of Eugenio Marín.</p>
+          <a class="link" href="https://mexicobusiness.news/sustainability/news/why-mexican-industries-should-pay-attention-water-2026">Read the article</a>
+        </article>
+        <article class="card">
+          <span class="kind">Encyclopedia entry · Sage Publishing · 2026</span>
+          <h3>“Political Ecology”</h3>
+          <p>Roman, G.R. “Political Ecology.” In <em>The SAGE Encyclopedia of Environmental Justice</em>, edited by Dorceta E. Taylor. Sage Publishing, 2026.</p>
+          <a class="link" href="https://doi.org/10.4135/9781071908006">View the encyclopedia (DOI)</a>
+        </article>
+        <article class="card">
+          <span class="kind">Map · ArcGIS</span>
+          <h3>USA-Mexico Border Counties and Municipios</h3>
+          <p>An interactive map I built of every county and municipio in the U.S.-Mexico border region, with the Rio Grande watershed boundary and the rivers of the Colorado River Basin, the two shared river systems that supply the border region.</p>
+          <a class="link" href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=df7cb0d2955c4029aec92bcf9fccf54f">Open the interactive map</a>
+        </article>
+        <article class="card">
+          <span class="kind">Senior thesis · Yale University, 2025</span>
+          <h3>For This Land, God Is Red: Vine Deloria Jr., Indigenous Worldviews, and Challenging Western Thought</h3>
+          <p>This thesis examines the reception and enduring significance of Vine Deloria Jr.’s <em>God Is Red</em> (1973), a groundbreaking critique of Western Christianity and defense of Indigenous worldviews. Drawing on archival research at Yale’s Beinecke Rare Book and Manuscript Library and interviews with leading Indigenous scholars, it traces how the book was received in its time and how its influence on debates about Indigenous sovereignty and environmental ethics has grown over fifty years.</p>
+          <span class="note">Advised by Professor Gerald Torres. Full text available on request.</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="speaking">
+  <div class="wrap row">
+    <div class="label">Speaking</div>
+    <div>
+      <h2>Talks and panels</h2>
+      <div class="work">
+        <article class="card talk">
+          <img class="talk-photo" src="images/actores-regionales-panel-wide.jpg" alt="Gabrielle Roman speaking on the Actores Regionales panel at the Bridges Over Water conference, with the panel slide and a map of the Rio Grande basin projected behind the speakers" width="1400" height="606">
+          <span class="kind">Panelist · Monterrey, Nuevo León, Mexico · October 2026</span>
+          <h3>“Actores Regionales” panel, Bridges Over Water conference</h3>
+          <p>Spoke on the regional actors panel at Bridges Over Water / Construyendo Puentes Sobre Aguas, a two-day binational conference on water shared between Mexico and the United States, hosted with the Permanent Forum of Binational Waters, the Rosenberg International Forum on Water Policy, and University of California Agriculture and Natural Resources. I shared findings from FUMEC’s Border Water Report 2026.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap row">
+    <div class="label">Experience</div>
+    <div>
+      <h2>Experience and education</h2>
+      <div class="timeline">
+        <div class="job">
+          <h3>Arizona Community Foundation</h3><span class="when">Aug 2026 to present</span>
+          <span class="role">Consultant, Arizona Environmental Convening</span>
+          <p>Keep Arizona’s first statewide environmental convening on track, manage its heat track, and built a 500+ organization invite database.</p>
+        </div>
+        <div class="job">
+          <h3>U.S.-Mexico Foundation for Science (FUMEC)</h3><span class="when">Oct 2025 to present</span>
+          <span class="role">Scientist in Residence, Water Program</span>
+          <p>Built the Border Agricultural Water Use initiative from research to pilot design; brokered a funded partnership with the International Water Management Institute.</p>
+        </div>
+        <div class="job">
+          <h3>Smithsonian National Museum of Natural History</h3><span class="when">Summers 2023 and 2024</span>
+          <span class="role">Genomics Research Assistant</span>
+          <p>Managed collection, processing, and data validation for 100+ historic DNA samples; earned 2 fellowships.</p>
+        </div>
+        <div class="job">
+          <h3>School for Field Studies, Kenya</h3><span class="when">Spring 2024</span>
+          <span class="role">Community Conservation and Field Ecology</span>
+          <p>Conducted human-wildlife community surveys, vegetation transects, bird surveys, and game counts.</p>
+        </div>
+        <div class="job">
+          <h3>Yale University</h3><span class="when">2025</span>
+          <span class="role">B.A., Environmental Studies</span>
+          <p>Spanish: professional proficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="wrap row">
+    <div class="label">Certificates</div>
+    <div>
+      <h2>Professional development</h2>
+      <ul class="cert-list">
+        <li><strong>California Water Course</strong><span class="when">Nov 2026</span>
+          <span class="issuer">UC Davis and UC Division of Agriculture and Natural Resources · 40-hour bilingual (English and Spanish) program on California water science, policy, and management</span>
+          <a class="issuer" href="certificates/California-Water-Course-Certificate.pdf">View certificate (PDF)</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap row">
+    <div class="label">Contact</div>
+    <div class="prose">
+      <h2>Let’s talk</h2>
+      <p>I’m always glad to connect about water, conservation, and environmental work in the Southwest.</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:gabrielle.rose.roman@gmail.com">gabrielle.rose.roman@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/gabrielleroseroman">linkedin.com/in/gabrielleroseroman</a></li>
+        <li>Based in Phoenix, Arizona</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Gabrielle Rose Roman</div>
+</footer>
+</body>
+</html>
